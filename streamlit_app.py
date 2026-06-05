@@ -15,7 +15,7 @@ st.caption("基于 CatBoost 模型 (AUC=0.7446)，训练数据：NHANES 2005–2
 def load_model():
     path = os.path.join(os.path.dirname(__file__), "models", "models.pkl")
     data = joblib.load(path)
-    return data["models"]["CatBoost"], data["scaler"], data["features"]
+    return data["model"], data["scaler"], data["features"]
 
 model, scaler, features = load_model()
 
